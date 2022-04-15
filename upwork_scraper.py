@@ -29,21 +29,19 @@ class Freelancer():
 # Mapping categories and their ID (ID passed as a parameter in request sent to server)
 categories = {  # "Accounting & Consulting": 531770282584862721,
     # "Admin Support": 531770282580668416,
-    # "Customer Service": 531770282580668417,
-    # "Data Science & Analytics": 531770282580668420,
-    # "Design & Creative": 531770282580668421,
-    # "Engineering & Architecture": 531770282584862722,
+    "Data Science & Analytics": 531770282580668420,
+    "Design & Creative": 531770282580668421,
+    "Engineering & Architecture": 531770282584862722,
     "IT & Networking": 531770282580668419,
     "Legal": 531770282584862723,
     "Sales & Marketing": 531770282580668422,
     "Translation": 531770282584862720,
     "Web, Mobile & Software Dev": 531770282580668418,
-    "Writing": 531770282580668423
 }
 
 if __name__ == "__main__":
     for category_ in categories:
-        for page in range(1, 21):
+        for page in range(21, 51):
             s = Service(ChromeDriverManager().install())
             driver = webdriver.Chrome(service=s)
             driver.get(
@@ -94,7 +92,7 @@ if __name__ == "__main__":
                         "div", class_="up-line-clamp-v2 clamped").text,
                     category=category_,
                 )
-                with open("data3.json", "a") as file:
+                with open("data5.json", "a") as file:
                     file.write(str(freelancer)+",\n")
             driver.quit()
             print(f"processed category: {category_}  & page:{page} ")
