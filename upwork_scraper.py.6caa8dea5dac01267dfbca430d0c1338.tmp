@@ -41,7 +41,7 @@ categories = {  "Accounting & Consulting": 531770282584862721,
 
 if __name__ == "__main__":
     for category_ in categories:
-        for page in range(21, 51):
+        for page in range(1, 51):
             s = Service(ChromeDriverManager().install())
             driver = webdriver.Chrome(service=s)
             driver.get(
