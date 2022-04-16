@@ -27,21 +27,21 @@ class Freelancer():
 
 
 # Mapping categories and their ID (ID passed as a parameter in request sent to server)
-categories = {  "Accounting & Consulting": 531770282584862721,
-    "Admin Support": 531770282580668416,
-    "Data Science & Analytics": 531770282580668420,
-    "Design & Creative": 531770282580668421,
-    "Engineering & Architecture": 531770282584862722,
-    "IT & Networking": 531770282580668419,
-    "Legal": 531770282584862723,
-    "Sales & Marketing": 531770282580668422,
-    "Translation": 531770282584862720,
-    "Web, Mobile & Software Dev": 531770282580668418,
-}
+categories = {"Accounting & Consulting": 531770282584862721,
+              "Admin Support": 531770282580668416,
+              "Data Science & Analytics": 531770282580668420,
+              "Design & Creative": 531770282580668421,
+              "Engineering & Architecture": 531770282584862722,
+              "IT & Networking": 531770282580668419,
+              "Legal": 531770282584862723,
+              "Sales & Marketing": 531770282580668422,
+              "Translation": 531770282584862720,
+              "Web, Mobile & Software Dev": 531770282580668418,
+              }
 
 if __name__ == "__main__":
     for category_ in categories:
-        for page in range(21, 51):
+        for page in range(1, 51):
             s = Service(ChromeDriverManager().install())
             driver = webdriver.Chrome(service=s)
             driver.get(
