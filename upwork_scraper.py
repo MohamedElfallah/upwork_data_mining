@@ -33,10 +33,10 @@ categories = {  # "Accounting & Consulting": 531770282584862721,
     "Design & Creative": 531770282580668421,
     "Engineering & Architecture": 531770282584862722,
     "IT & Networking": 531770282580668419,
-    "Legal": 531770282584862723,
-    "Sales & Marketing": 531770282580668422,
-    "Translation": 531770282584862720,
-    "Web, Mobile & Software Dev": 531770282580668418,
+    # "Legal": 531770282584862723,
+    # "Sales & Marketing": 531770282580668422,
+    # "Translation": 531770282584862720,
+    # "Web, Mobile & Software Dev": 531770282580668418,
 }
 
 if __name__ == "__main__":
